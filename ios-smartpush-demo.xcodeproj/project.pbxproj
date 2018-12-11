@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAE7D8DB21C0245200FB9930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8DA21C0245200FB9930 /* AppDelegate.swift */; };
+		BAE7D8DD21C0245200FB9930 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8DC21C0245200FB9930 /* ViewController.swift */; };
+		BAE7D8E021C0245200FB9930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE7D8DE21C0245200FB9930 /* Main.storyboard */; };
+		BAE7D8E221C0245500FB9930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE7D8E121C0245500FB9930 /* Assets.xcassets */; };
+		BAE7D8E521C0245500FB9930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE7D8E321C0245500FB9930 /* LaunchScreen.storyboard */; };
+		BAE7D8F021C0245500FB9930 /* ios_smartpush_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8EF21C0245500FB9930 /* ios_smartpush_demoTests.swift */; };
+		BAE7D8FB21C0245500FB9930 /* ios_smartpush_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8FA21C0245500FB9930 /* ios_smartpush_demoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAE7D8EC21C0245500FB9930 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAE7D8CF21C0245200FB9930 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE7D8D621C0245200FB9930;
+			remoteInfo = "ios-smartpush-demo";
+		};
+		BAE7D8F721C0245500FB9930 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAE7D8CF21C0245200FB9930 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE7D8D621C0245200FB9930;
+			remoteInfo = "ios-smartpush-demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAE7D8D721C0245200FB9930 /* ios-smartpush-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-smartpush-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE7D8DA21C0245200FB9930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAE7D8DC21C0245200FB9930 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAE7D8DF21C0245200FB9930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAE7D8E121C0245500FB9930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAE7D8E421C0245500FB9930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAE7D8E621C0245500FB9930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE7D8EB21C0245500FB9930 /* ios-smartpush-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-smartpush-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE7D8EF21C0245500FB9930 /* ios_smartpush_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_smartpush_demoTests.swift; sourceTree = "<group>"; };
+		BAE7D8F121C0245500FB9930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE7D8F621C0245500FB9930 /* ios-smartpush-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-smartpush-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE7D8FA21C0245500FB9930 /* ios_smartpush_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_smartpush_demoUITests.swift; sourceTree = "<group>"; };
+		BAE7D8FC21C0245500FB9930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAE7D8D421C0245200FB9930 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE7D8E821C0245500FB9930 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE7D8F321C0245500FB9930 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAE7D8CE21C0245200FB9930 = {
+			isa = PBXGroup;
+			children = (
+				BAE7D8D921C0245200FB9930 /* ios-smartpush-demo */,
+				BAE7D8EE21C0245500FB9930 /* ios-smartpush-demoTests */,
+				BAE7D8F921C0245500FB9930 /* ios-smartpush-demoUITests */,
+				BAE7D8D821C0245200FB9930 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAE7D8D821C0245200FB9930 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAE7D8D721C0245200FB9930 /* ios-smartpush-demo.app */,
+				BAE7D8EB21C0245500FB9930 /* ios-smartpush-demoTests.xctest */,
+				BAE7D8F621C0245500FB9930 /* ios-smartpush-demoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAE7D8D921C0245200FB9930 /* ios-smartpush-demo */ = {
+			isa = PBXGroup;
+			children = (
+				BAE7D8DA21C0245200FB9930 /* AppDelegate.swift */,
+				BAE7D8DC21C0245200FB9930 /* ViewController.swift */,
+				BAE7D8DE21C0245200FB9930 /* Main.storyboard */,
+				BAE7D8E121C0245500FB9930 /* Assets.xcassets */,
+				BAE7D8E321C0245500FB9930 /* LaunchScreen.storyboard */,
+				BAE7D8E621C0245500FB9930 /* Info.plist */,
+			);
+			path = "ios-smartpush-demo";
+			sourceTree = "<group>";
+		};
+		BAE7D8EE21C0245500FB9930 /* ios-smartpush-demoTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAE7D8EF21C0245500FB9930 /* ios_smartpush_demoTests.swift */,
+				BAE7D8F121C0245500FB9930 /* Info.plist */,
+			);
+			path = "ios-smartpush-demoTests";
+			sourceTree = "<group>";
+		};
+		BAE7D8F921C0245500FB9930 /* ios-smartpush-demoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BAE7D8FA21C0245500FB9930 /* ios_smartpush_demoUITests.swift */,
+				BAE7D8FC21C0245500FB9930 /* Info.plist */,
+			);
+			path = "ios-smartpush-demoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAE7D8D621C0245200FB9930 /* ios-smartpush-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE7D8FF21C0245500FB9930 /* Build configuration list for PBXNativeTarget "ios-smartpush-demo" */;
+			buildPhases = (
+				BAE7D8D321C0245200FB9930 /* Sources */,
+				BAE7D8D421C0245200FB9930 /* Frameworks */,
+				BAE7D8D521C0245200FB9930 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-smartpush-demo";
+			productName = "ios-smartpush-demo";
+			productReference = BAE7D8D721C0245200FB9930 /* ios-smartpush-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAE7D8EA21C0245500FB9930 /* ios-smartpush-demoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE7D90221C0245500FB9930 /* Build configuration list for PBXNativeTarget "ios-smartpush-demoTests" */;
+			buildPhases = (
+				BAE7D8E721C0245500FB9930 /* Sources */,
+				BAE7D8E821C0245500FB9930 /* Frameworks */,
+				BAE7D8E921C0245500FB9930 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAE7D8ED21C0245500FB9930 /* PBXTargetDependency */,
+			);
+			name = "ios-smartpush-demoTests";
+			productName = "ios-smartpush-demoTests";
+			productReference = BAE7D8EB21C0245500FB9930 /* ios-smartpush-demoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BAE7D8F521C0245500FB9930 /* ios-smartpush-demoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE7D90521C0245500FB9930 /* Build configuration list for PBXNativeTarget "ios-smartpush-demoUITests" */;
+			buildPhases = (
+				BAE7D8F221C0245500FB9930 /* Sources */,
+				BAE7D8F321C0245500FB9930 /* Frameworks */,
+				BAE7D8F421C0245500FB9930 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAE7D8F821C0245500FB9930 /* PBXTargetDependency */,
+			);
+			name = "ios-smartpush-demoUITests";
+			productName = "ios-smartpush-demoUITests";
+			productReference = BAE7D8F621C0245500FB9930 /* ios-smartpush-demoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAE7D8CF21C0245200FB9930 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Carlos Correa";
+				TargetAttributes = {
+					BAE7D8D621C0245200FB9930 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BAE7D8EA21C0245500FB9930 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BAE7D8D621C0245200FB9930;
+					};
+					BAE7D8F521C0245500FB9930 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BAE7D8D621C0245200FB9930;
+					};
+				};
+			};
+			buildConfigurationList = BAE7D8D221C0245200FB9930 /* Build configuration list for PBXProject "ios-smartpush-demo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAE7D8CE21C0245200FB9930;
+			productRefGroup = BAE7D8D821C0245200FB9930 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAE7D8D621C0245200FB9930 /* ios-smartpush-demo */,
+				BAE7D8EA21C0245500FB9930 /* ios-smartpush-demoTests */,
+				BAE7D8F521C0245500FB9930 /* ios-smartpush-demoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAE7D8D521C0245200FB9930 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE7D8E521C0245500FB9930 /* LaunchScreen.storyboard in Resources */,
+				BAE7D8E221C0245500FB9930 /* Assets.xcassets in Resources */,
+				BAE7D8E021C0245200FB9930 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE7D8E921C0245500FB9930 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE7D8F421C0245500FB9930 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAE7D8D321C0245200FB9930 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE7D8DD21C0245200FB9930 /* ViewController.swift in Sources */,
+				BAE7D8DB21C0245200FB9930 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE7D8E721C0245500FB9930 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE7D8F021C0245500FB9930 /* ios_smartpush_demoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE7D8F221C0245500FB9930 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE7D8FB21C0245500FB9930 /* ios_smartpush_demoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAE7D8ED21C0245500FB9930 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAE7D8D621C0245200FB9930 /* ios-smartpush-demo */;
+			targetProxy = BAE7D8EC21C0245500FB9930 /* PBXContainerItemProxy */;
+		};
+		BAE7D8F821C0245500FB9930 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAE7D8D621C0245200FB9930 /* ios-smartpush-demo */;
+			targetProxy = BAE7D8F721C0245500FB9930 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BAE7D8DE21C0245200FB9930 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAE7D8DF21C0245200FB9930 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAE7D8E321C0245500FB9930 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAE7D8E421C0245500FB9930 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAE7D8FD21C0245500FB9930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAE7D8FE21C0245500FB9930 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAE7D90021C0245500FB9930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.getmo.ios-smartupush-demo.ios-smartpush-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAE7D90121C0245500FB9930 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.getmo.ios-smartupush-demo.ios-smartpush-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BAE7D90321C0245500FB9930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				INFOPLIST_FILE = "ios-smartpush-demoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.getmo.ios-smartupush-demo.ios-smartpush-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-smartpush-demo.app/ios-smartpush-demo";
+			};
+			name = Debug;
+		};
+		BAE7D90421C0245500FB9930 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				INFOPLIST_FILE = "ios-smartpush-demoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.getmo.ios-smartupush-demo.ios-smartpush-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-smartpush-demo.app/ios-smartpush-demo";
+			};
+			name = Release;
+		};
+		BAE7D90621C0245500FB9930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				INFOPLIST_FILE = "ios-smartpush-demoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.getmo.ios-smartupush-demo.ios-smartpush-demoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ios-smartpush-demo";
+			};
+			name = Debug;
+		};
+		BAE7D90721C0245500FB9930 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				INFOPLIST_FILE = "ios-smartpush-demoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.getmo.ios-smartupush-demo.ios-smartpush-demoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ios-smartpush-demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAE7D8D221C0245200FB9930 /* Build configuration list for PBXProject "ios-smartpush-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE7D8FD21C0245500FB9930 /* Debug */,
+				BAE7D8FE21C0245500FB9930 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE7D8FF21C0245500FB9930 /* Build configuration list for PBXNativeTarget "ios-smartpush-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE7D90021C0245500FB9930 /* Debug */,
+				BAE7D90121C0245500FB9930 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE7D90221C0245500FB9930 /* Build configuration list for PBXNativeTarget "ios-smartpush-demoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE7D90321C0245500FB9930 /* Debug */,
+				BAE7D90421C0245500FB9930 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE7D90521C0245500FB9930 /* Build configuration list for PBXNativeTarget "ios-smartpush-demoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE7D90621C0245500FB9930 /* Debug */,
+				BAE7D90721C0245500FB9930 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAE7D8CF21C0245200FB9930 /* Project object */;
+}

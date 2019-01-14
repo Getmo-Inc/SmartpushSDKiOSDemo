@@ -3,44 +3,91 @@
 //  ios-smartpush-demo
 //
 //  Created by Carlos Correa on 11/12/18.
-//  Copyright © 2018 Carlos Correa. All rights reserved.
+//  Copyright © 2018 Getmo. All rights reserved.
 //
 
 import UIKit
+import UserNotifications
+import GoogleMaps
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNUserNotificationCenterDelegate  {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        NSSetUncaughtExceptionHandler { (exception) in
+            print("******************************************************")
+            print("FatalError: \(exception)")
+            for i in exception.callStackSymbols {
+                print("\n\(i)")
+            }
+            print("******************************************************")
+        }
+        
+        let shared = SmartpushSDK.sharedInstance()
+        shared?.delegate = self
+        shared?.didFinishLaunching(options: launchOptions)
+        shared?.registerForPushNotifications()
+        
+        GMSServices.provideAPIKey("AIzaSyA8MhV4bR87HRxEUULksAev2JswkeMYktY")
+        
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self
+        }
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 10.0/255.0, green: 168.0/255.0, blue: 158.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        let application = UIApplication.shared
+        
+        if(application.applicationState == .active){
+            print("user tapped the notification bar when the app is in foreground")
+            
+        }
+        
+        if(application.applicationState == .inactive)
+        {
+            print("user tapped the notification bar when the app is in background")
+        }
+        
+        completionHandler([.alert, .badge, .sound])
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]){
+        SmartpushSDK.sharedInstance().didReceiveRemoteNotification(userInfo)
     }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    func onPushAccepted(_ push: [AnyHashable: Any]!, andOpenFromPush openFromPush: Bool) {
+        print("CARLOS: onPushAccepted. OpenFromPush: \(openFromPush)")
     }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    func onPushAccepted(_ push: [AnyHashable : Any]!, andOpenFromPush openFromPush: Bool, withUri uri: String!) {
+        print("CARLOS: onPushAccepted. OpenFromPush: \(openFromPush). WithUri: \(uri)")
     }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error:Error){
+        SmartpushSDK.sharedInstance().didFailToRegisterForRemoteNotificationsWithError(error)
     }
-
-
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
+        SmartpushSDK.sharedInstance().didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
+        
+        let token = deviceToken.map { String(format: "%02hhx", $0) }.joined()
+        print("Token: \(token)")
+    }
+    
+    
+    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings){
+        SmartpushSDK.sharedInstance().didRegister(notificationSettings)
+    }
 }
-

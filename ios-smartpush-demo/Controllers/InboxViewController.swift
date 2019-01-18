@@ -50,6 +50,7 @@ struct PostParameters:Encodable{
 
 class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    weak var refreshControl: UIRefreshControl!
     @IBOutlet var tableView: UITableView!
     
     @IBOutlet weak var spinnerInbox: UIActivityIndicatorView!
@@ -58,23 +59,33 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = 44.0
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.rowHeight = 44.0
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        self.tableView.refreshControl = refreshControl
+        self.refreshControl = refreshControl
+        
+       refreshData()
+        
+    }
+    
+    @objc func refreshData() {
+        refreshControl.beginRefreshing()
         fetchLastNotifications { (nots) in
             let slice = nots.prefix(10)
             self.notifications = Array(slice)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
-            
         }
-        
     }
 
     fileprivate func fetchLastNotifications (completion: @escaping ([Notification]) -> ()) {
-    
+        
         let urlString = "https://api.getmo.com.br/notifications/last"
         let url = URL(string: urlString)
         var request = URLRequest(url: url!)

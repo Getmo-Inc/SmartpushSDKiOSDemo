@@ -19,7 +19,10 @@ class TagsViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
+    
+    func refreshTags(){
+        
+    }
     
     @IBAction func sendTag(_ sender: UIButton) {
         

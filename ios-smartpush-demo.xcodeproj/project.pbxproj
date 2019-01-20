@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0113C82DD06D00F5F9570502 /* Pods_ios_smartpush_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E961BE1E269FA3741D0F7EDE /* Pods_ios_smartpush_demoTests.framework */; };
 		B4456EE7174CF3534A7E3FE1 /* Pods_ios_smartpush_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE4639A842CCD447C02A510 /* Pods_ios_smartpush_demo.framework */; };
+		BA03F2EF21F23C3400D1FCD3 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03F2EE21F23C3400D1FCD3 /* Tags.swift */; };
 		BA41266D21C414AC0058E737 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41266C21C414AC0058E737 /* SideMenuTableViewController.swift */; };
 		BA4126C421E3DECE0058E737 /* SmartpushSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4126BF21E3DB1A0058E737 /* SmartpushSDK.framework */; };
 		BA4126C521E3DECE0058E737 /* SmartpushSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA4126BF21E3DB1A0058E737 /* SmartpushSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -124,6 +125,7 @@
 		3CEDD8A3AD9CE74D8EF20BC7 /* Pods-ios-smartpush-demoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-smartpush-demoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-smartpush-demoUITests/Pods-ios-smartpush-demoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A6CCA549850FEB2974DBF843 /* Pods-ios-smartpush-demoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-smartpush-demoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-smartpush-demoTests/Pods-ios-smartpush-demoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7D93D9B594C712ADCA9D526 /* Pods-ios-smartpush-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-smartpush-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo.release.xcconfig"; sourceTree = "<group>"; };
+		BA03F2EE21F23C3400D1FCD3 /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
 		BA41266C21C414AC0058E737 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SmartpushSDK.xcodeproj; path = ../SmartpushSDKiOS/SmartpushSDK.xcodeproj; sourceTree = "<group>"; };
 		BA4126D021E3DFBF0058E737 /* ios-smartpush-demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-smartpush-demo.entitlements"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				BA47060121E5199900529CBE /* Geofence.swift */,
 				BA47060421E51AE400529CBE /* AppUtils.swift */,
+				BA03F2EE21F23C3400D1FCD3 /* Tags.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				BA8C4CDE21E65BFA0099AE50 /* InboxCell.swift in Sources */,
 				BAE7D8DD21C0245200FB9930 /* HomeViewController.swift in Sources */,
 				BA4705FD21E4D09000529CBE /* GeofenceViewController.swift in Sources */,
+				BA03F2EF21F23C3400D1FCD3 /* Tags.swift in Sources */,
 				BA47060521E51AE500529CBE /* AppUtils.swift in Sources */,
 				BA4126DB21E4233E0058E737 /* TagsViewController.swift in Sources */,
 				BA41266D21C414AC0058E737 /* SideMenuTableViewController.swift in Sources */,

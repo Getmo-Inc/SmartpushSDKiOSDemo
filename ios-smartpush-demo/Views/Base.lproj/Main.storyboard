@@ -189,7 +189,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRo-BO-oWU">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRo-BO-oWU">
                                 <rect key="frame" x="52" y="215" width="270" height="236"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marque as categorias de notícias do seu interesse." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zha-g9-C2G">
@@ -234,6 +234,9 @@
                                             <constraint firstAttribute="height" constant="31" id="iDX-y8-RNm"/>
                                             <constraint firstAttribute="width" constant="47" id="sXy-hQ-rBN"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="switchPoliticsValueChange:" destination="FQa-CE-HGE" eventType="valueChanged" id="o8x-md-8DV"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AU7-Ef-RRf">
                                         <rect key="frame" x="20" y="120" width="49" height="31"/>
@@ -241,6 +244,9 @@
                                             <constraint firstAttribute="width" constant="47" id="bOL-lc-PSX"/>
                                             <constraint firstAttribute="height" constant="31" id="dFN-vF-9XV"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="switchEconomyValueChange:" destination="FQa-CE-HGE" eventType="valueChanged" id="Vh0-VQ-uP5"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ykb-T8-2JM">
                                         <rect key="frame" x="20" y="165" width="49" height="31"/>
@@ -248,6 +254,9 @@
                                             <constraint firstAttribute="width" constant="47" id="bvE-c0-yDe"/>
                                             <constraint firstAttribute="height" constant="31" id="uB5-iD-pkr"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="switchSportsValueChange:" destination="FQa-CE-HGE" eventType="valueChanged" id="L23-Ml-Qd9"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="0.82682291669999997" alpha="0.77120928700000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,6 +312,13 @@
                                     <action selector="sendTag:" destination="FQa-CE-HGE" eventType="touchUpInside" id="iol-ou-IB3"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kEU-7p-H06">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="iEA-MQ-i26"/>
+                                    <constraint firstAttribute="width" constant="20" id="xK4-Ac-r1C"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.039215686270000001" green="0.6588235294" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -314,18 +330,22 @@
                             <constraint firstItem="68g-bx-kbh" firstAttribute="trailing" secondItem="TRU-9d-iaa" secondAttribute="trailing" constant="16" id="OTX-Q3-T1V"/>
                             <constraint firstItem="Cj9-Ah-onD" firstAttribute="leading" secondItem="68g-bx-kbh" secondAttribute="leading" constant="16" id="OxL-2G-XZh"/>
                             <constraint firstItem="TRU-9d-iaa" firstAttribute="leading" secondItem="68g-bx-kbh" secondAttribute="leading" constant="16" id="V4c-0n-4cy"/>
+                            <constraint firstItem="kEU-7p-H06" firstAttribute="centerX" secondItem="3Ud-Ef-rBB" secondAttribute="centerX" id="YVJ-dm-zE4"/>
                             <constraint firstItem="uRo-BO-oWU" firstAttribute="leading" secondItem="68g-bx-kbh" secondAttribute="leading" constant="52" id="eC9-FY-66b"/>
                             <constraint firstItem="68g-bx-kbh" firstAttribute="trailing" secondItem="uRo-BO-oWU" secondAttribute="trailing" constant="53" id="f9e-Bu-TGb"/>
                             <constraint firstItem="uRo-BO-oWU" firstAttribute="top" secondItem="TRU-9d-iaa" secondAttribute="bottom" constant="11" id="fce-uD-3os"/>
+                            <constraint firstItem="kEU-7p-H06" firstAttribute="centerY" secondItem="3Ud-Ef-rBB" secondAttribute="centerY" id="wUs-U4-jJI"/>
                             <constraint firstItem="68g-bx-kbh" firstAttribute="bottom" secondItem="D7n-h5-Bhd" secondAttribute="bottom" constant="62" id="zFk-vH-AYV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="68g-bx-kbh"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="spinnerTags" destination="kEU-7p-H06" id="Z82-t5-f1m"/>
                         <outlet property="switchEconomy" destination="AU7-Ef-RRf" id="R20-E9-fQr"/>
                         <outlet property="switchPolitics" destination="13Q-Rj-LYV" id="Dxn-Xi-lwa"/>
                         <outlet property="switchSports" destination="Ykb-T8-2JM" id="KlS-Pn-sEr"/>
+                        <outlet property="viewTags" destination="uRo-BO-oWU" id="8pn-6y-Zb8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DdX-Mu-z3A" userLabel="First Responder" sceneMemberID="firstResponder"/>

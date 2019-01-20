@@ -67,9 +67,7 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         self.tableView.refreshControl = refreshControl
         self.refreshControl = refreshControl
-        
-       refreshData()
-        
+       
     }
     
     @objc func refreshData() {

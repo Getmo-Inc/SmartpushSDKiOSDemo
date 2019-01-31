@@ -17,6 +17,7 @@ class InboxCell: UITableViewCell {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbDescription: UILabel!
     @IBOutlet weak var imagebanner: UIImageView!
+    @IBOutlet weak var btExtra: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,4 +30,24 @@ class InboxCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    var button: UIButton!
+    
+    var buttonAction: ((Any) -> Void)?
+    
+    @objc func buttonPressed(sender: Any) {
+        self.buttonAction?(sender)
+    }
+    
+//    @IBAction func extraButtonPressed(_ sender: Any) {
+//
+//        guard let cell = sender.superview?.superview as? InboxCell else {
+//            return // or fatalError() or whatever
+//        }
+//
+//        let indexPath = itemTable.indexPath(for: cell)
+//        let obj = self.notifications[indexPath.row]
+//
+//        SmartpushSDK.sharedInstance()?.requestExtraContent(for: obj.pushid)
+//    }
+    
 }

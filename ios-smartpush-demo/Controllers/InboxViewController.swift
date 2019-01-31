@@ -10,6 +10,9 @@ import UIKit
 import Kingfisher
 
 struct Extra:Codable {
+    // Extra e Payload são objetos com estrutura customisável
+    var title: String?
+    var message: String?
 }
 struct Alert:Codable {
     var title: String?
@@ -18,26 +21,50 @@ struct Alert:Codable {
 struct Aps:Codable {
     var alert: Alert?
     var category:String?
-    var mutablecontent:Int?
+    var mutablecontent:String?
     enum CodingKeys: String, CodingKey
     {
         case category = "category"
         case mutablecontent = "mutable-content"
         case alert = "alert"
     }
+    
+    init(alert: Alert? = nil, category: String? = nil, mutablecontent: String? = nil) {
+        self.alert = alert
+        self.category = category
+        self.mutablecontent = mutablecontent
+    }
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        if let value = try? container.decode(Int.self, forKey: .mutablecontent) {
+            mutablecontent = String(value)
+        } else {
+            mutablecontent = try container.decode(String.self, forKey: .mutablecontent)
+        }
+    }
+    
 }
 struct Payload:Codable {
     var aps: Aps?
     var mediaURL:String?
     var category:String?
 }
-struct Notification:Codable{
+struct NotificationsCore:Codable{
     var pushid:String?
     var clicked:Int?
     var payload:Payload?
-    var extra:Extra?
     var created_at:String?
     var sent_at:String?
+    
+    enum CodingKeys: String, CodingKey
+    {
+        case pushid = "pushid"
+        case clicked = "clicked"
+        case payload = "payload"
+        case created_at = "created_at"
+        case sent_at = "sent_at"
+    }
+    
 }
 struct PostParameters:Encodable{
     var devid:String?
@@ -52,9 +79,8 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     weak var refreshControl: UIRefreshControl!
     @IBOutlet var tableView: UITableView!
-    
-    @IBOutlet weak var spinnerInbox: UIActivityIndicatorView!
-    var notifications = [Notification]()
+    var notifications = [NotificationsCore]()
+    var testeCarlos: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,54 +93,38 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         self.tableView.refreshControl = refreshControl
         self.refreshControl = refreshControl
-       
+        
+        //Add observer get last notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshData), name: NSNotification.Name.SmartpushSDKLastNotificationsObtained, object: nil)
+        
+        //Add observer get extra content
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showExtraContent), name: NSNotification.Name.SmartpushSDKExtraContentObtained, object: nil)
+        
+        SmartpushSDK.sharedInstance().requestLastNotifications()
+        
+        // Solicitar da SDK as notificações não lidas
+        //SmartpushSDK.sharedInstance()?.requestUnreadNotifications()
+
     }
     
-    @objc func refreshData() {
+    @objc func showExtraContent(){
+        print((SmartpushSDK.sharedInstance().getExtraContent()?.dataString!)!)
+    }
+    
+    @objc func refreshData(){
         refreshControl.beginRefreshing()
-        fetchLastNotifications { (nots) in
-            let slice = nots.prefix(10)
-            self.notifications = Array(slice)
+        do {
+            //let data = SmartpushSDK.sharedInstance().getUnreadNotifications()?.dataResponse!
+            let data = SmartpushSDK.sharedInstance().getLastNotifications()?.dataResponse!
+            let nots = try JSONDecoder().decode([NotificationsCore].self, from:data!)
+            self.notifications = nots
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
             }
+        } catch let err {
+            print("erro ao acessar notificações", err)
         }
-    }
-
-    fileprivate func fetchLastNotifications (completion: @escaping ([Notification]) -> ()) {
-        
-        let urlString = "https://api.getmo.com.br/notifications/last"
-        let url = URL(string: urlString)
-        var request = URLRequest(url: url!)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        do {
-            var post = PostParameters()
-            post.devid = "CN6Z8Eka3FSQ9IA"
-            post.appid = "D0177E40654CD3D"
-            post.hwid = AppUtils.shared.hwid
-            post.platform = "iOS"
-            post.show = "all"
-            
-            let params = try JSONEncoder().encode(post.self)
-            request.httpBody = params
-        } catch let jsonEncodeErr {
-            print("Erro ao serializar o json", jsonEncodeErr)
-        }
-        
-        URLSession.shared.dataTask(with: request) { (data, response, err) in
-            guard let data = data else {return}
-            
-            do {
-                let notifications = try JSONDecoder().decode([Notification].self, from:data)
-                completion(notifications)
-            } catch let err {
-                print("erro ao acessar notificações", err)
-            }
-            
-        }.resume()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -129,16 +139,16 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if let title = obj.payload?.aps?.alert?.title {
                 cell.lbTitle.text = title
             }
-            
+
             if let description = obj.payload?.aps?.alert?.body {
                 cell.lbDescription.text = description
             }
-            
+
             if let bannerImage = obj.payload?.mediaURL {
                 let url = URL(string: bannerImage)
                 cell.imagebanner.kf.setImage(with: url!)
             }
-            
+        
             return cell
         }
         
@@ -149,4 +159,15 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
     {
         return 300.0;
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // para marcar a notification como lida
+        //let obj = self.notifications[indexPath.row]
+        //SmartpushSDK.sharedInstance()?.markPush(asRead: obj.pushid)
+        
+        let obj = self.notifications[indexPath.row]
+        SmartpushSDK.sharedInstance()?.requestExtraContent(for: obj.pushid)
+        
+    }
+    
 }

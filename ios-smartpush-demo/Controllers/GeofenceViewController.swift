@@ -68,14 +68,14 @@ class GeofenceViewController: UIViewController, CLLocationManagerDelegate, GMSMa
         self.viewLatLng.addSubview(lbLat!)
         self.viewLatLng.addSubview(lbLong!)
         self.viewLatLng.addSubview(btnSend!)
-    
-        tfLat.text = "-29.660262"
-        tfLng.text = "-51.038581"
         
-        //var longitude = -51.171546
-//        var latitude = -29.660262
-//        var longitude = -51.038581
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil);
+
+        //Set TECNOPUC location
+        tfLat.text = "-30.059047"
+        tfLng.text = "-51.171546"
+
     }
     
     @IBAction func sendLatLng(_ sender: UIButton) {
@@ -128,6 +128,24 @@ class GeofenceViewController: UIViewController, CLLocationManagerDelegate, GMSMa
         mapView?.animate(to: camera)
         
         
+    }
+    
+    @objc func keyboardWillShow() {
+        self.view.frame.origin.y = -230 // Move view 150 points upward
+    }
+    
+    @objc func keyboardWillHide() {
+        self.view.frame.origin.y = 0 // Move view to original position
+    }
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.becomeFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
     }
     
 }

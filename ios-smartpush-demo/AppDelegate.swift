@@ -50,16 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNU
         
         let application = UIApplication.shared
         
-        if(application.applicationState == .active){
-            print("user tapped the notification bar when the app is in foreground")
-            
-        }
-        
-        if(application.applicationState == .inactive)
-        {
-            print("user tapped the notification bar when the app is in background")
-        }
-        
         completionHandler([.alert, .badge, .sound])
     }
     

@@ -29,12 +29,25 @@ struct Aps:Codable {
         case alert = "alert"
     }
     
-    init(alert: Alert? = nil, category: String? = nil, mutablecontent: String? = nil) {
+    init(alert: Alert, category: String, mutablecontent: String? = nil) {
         self.alert = alert
         self.category = category
         self.mutablecontent = mutablecontent
     }
+    
+    
     init(from decoder: Decoder) throws {
+        
+        let containerAlert = try decoder.container(keyedBy: CodingKeys.self)
+        if let value = try? containerAlert.decode(Alert.self, forKey: .alert) {
+            alert = value
+        }
+        
+        let containerCategory = try decoder.container(keyedBy: CodingKeys.self)
+        if let value = try? containerCategory.decode(String.self, forKey: .category) {
+            category = value
+        }
+        
         let container = try decoder.container(keyedBy: CodingKeys.self)
         if let value = try? container.decode(Int.self, forKey: .mutablecontent) {
             mutablecontent = String(value)
@@ -100,6 +113,7 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //Add observer get extra content
         NotificationCenter.default.addObserver(self, selector: #selector(self.showExtraContent), name: NSNotification.Name.SmartpushSDKExtraContentObtained, object: nil)
         
+        // Solicitar da SDK as últimas notificações
         SmartpushSDK.sharedInstance().requestLastNotifications()
         
         // Solicitar da SDK as notificações não lidas
@@ -116,11 +130,13 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
         do {
             //let data = SmartpushSDK.sharedInstance().getUnreadNotifications()?.dataResponse!
             let data = SmartpushSDK.sharedInstance().getLastNotifications()?.dataResponse!
-            let nots = try JSONDecoder().decode([NotificationsCore].self, from:data!)
-            self.notifications = nots
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.refreshControl.endRefreshing()
+            if data != nil {
+                let nots = try JSONDecoder().decode([NotificationsCore].self, from:data!)
+                self.notifications = nots
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.refreshControl.endRefreshing()
+                }
             }
         } catch let err {
             print("erro ao acessar notificações", err)

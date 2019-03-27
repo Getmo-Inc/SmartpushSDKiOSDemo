@@ -8,20 +8,20 @@
 
 import UIKit
 
-enum Categorys:NSInteger{
-    case PushNormal = 0,
-    PushEmoji,
-    PushImage,
-    PushGif,
-    PushAudio,
-    PushVideo,
-    PushCarouselCoverflow,
-    PushCarouselRotary,
-    PushCarouselCylinder,
-    PushCarouselCylinderInverted,
-    PushCarouselLinear,
-    PushCarouselStack,
-    PushCarouselStackInverted
+enum Categorys:String{
+    case PushNormal = "PUSH",
+    PushEmoji = "EMOJI",
+    PushImage = "BANNER",
+    PushGif = "GIF",
+    PushAudio = "AUDIO",
+    PushVideo = "VIDEO",
+    PushCarouselCoverflow = "COVERFLOW",
+    PushCarouselRotary = "ROTARY",
+    PushCarouselCylinder = "CYLINDER",
+    PushCarouselCylinderInverted = "INVERTED" ,
+    PushCarouselLinear = "LINEAR",
+    PushCarouselStack = "TIME_MACHINE",
+    PushCarouselStackInverted = "TIME_MACHINE_INVERTED"
 }
 
 let banner1 = "http://image.buscape.com//mobile//notifications//android//0110galax.png"
@@ -36,7 +36,6 @@ class LocalNotificationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func actionPushNormal(_ sender: UIButton) {
@@ -51,7 +50,7 @@ class LocalNotificationViewController: UIViewController {
         let notification  = SmartpushNotification()
         notification.title = "Oferta"
         notification.body = "Temos algumas ofertas especiais para você 😃"
-        notification.category = "PUSH"
+        notification.category = Categorys.PushEmoji.rawValue
         requestPushNotification(notification)
     }
     
@@ -60,7 +59,7 @@ class LocalNotificationViewController: UIViewController {
         notification.title = "Oferta"
         notification.body = "Temos algumas ofertas especiais para você"
         notification.mediaUrl = "https://s.aolcdn.com/hss/storage/midas/b386937631a1f03665c1d57289070898/203417456/simpsons.jpg"
-        notification.category = "BANNER"
+        notification.category = Categorys.PushImage.rawValue
         requestPushNotification(notification)
     }
     
@@ -69,7 +68,7 @@ class LocalNotificationViewController: UIViewController {
         notification.title = "Oferta"
         notification.body = "Temos algumas ofertas especiais para você"
         notification.mediaUrl = "https://media.giphy.com/media/qi29MoLjWNPUI/giphy.gif"
-        notification.category = "GIF"
+        notification.category = Categorys.PushGif.rawValue
         requestPushNotification(notification)
     }
     
@@ -78,7 +77,7 @@ class LocalNotificationViewController: UIViewController {
         notification.title = "Oferta"
         notification.body = "Temos algumas ofertas especiais para você"
         notification.mediaUrl = "http://www.audiocheck.net/Audio/audiocheck.net_welcome.mp3"
-        notification.category = "AUDIO"
+        notification.category = Categorys.PushAudio.rawValue
         requestPushNotification(notification)
     }
     
@@ -87,7 +86,7 @@ class LocalNotificationViewController: UIViewController {
         notification.title = "Oferta"
         notification.body = "Temos algumas ofertas especiais para você"
         notification.mediaUrl = "0S6pHex-KCo"
-        notification.category = "VIDEO"
+        notification.category = Categorys.PushVideo.rawValue
         requestPushNotification(notification)
     }
     
@@ -97,7 +96,7 @@ class LocalNotificationViewController: UIViewController {
         notification.body = "Temos algumas ofertas especiais para você"
         notification.banners = banners
         notification.category = "CARROUSSEL"
-        notification.carouselType = "COVERFLOW"
+        notification.carouselType = Categorys.PushCarouselCoverflow.rawValue
         requestPushNotification(notification)
     }
     
@@ -107,7 +106,7 @@ class LocalNotificationViewController: UIViewController {
         notification.body = "Temos algumas ofertas especiais para você"
         notification.banners = banners
         notification.category = "CARROUSSEL"
-        notification.carouselType = "ROTARY"
+        notification.carouselType = Categorys.PushCarouselRotary.rawValue
         requestPushNotification(notification)
     }
     
@@ -117,7 +116,7 @@ class LocalNotificationViewController: UIViewController {
         notification.body = "Temos algumas ofertas especiais para você"
         notification.banners = banners
         notification.category = "CARROUSSEL"
-        notification.carouselType = "CYLINDER"
+        notification.carouselType = Categorys.PushCarouselCylinder.rawValue
         requestPushNotification(notification)
     }
     
@@ -127,7 +126,7 @@ class LocalNotificationViewController: UIViewController {
         notification.body = "Temos algumas ofertas especiais para você"
         notification.banners = banners
         notification.category = "CARROUSSEL"
-        notification.carouselType = "INVERTED"
+        notification.carouselType = Categorys.PushCarouselCylinderInverted.rawValue
         requestPushNotification(notification)
     }
     
@@ -137,7 +136,7 @@ class LocalNotificationViewController: UIViewController {
         notification.body = "Temos algumas ofertas especiais para você"
         notification.banners = banners
         notification.category = "CARROUSSEL"
-        notification.carouselType = "LINEAR"
+        notification.carouselType = Categorys.PushCarouselLinear.rawValue
         requestPushNotification(notification)
     }
     
@@ -147,7 +146,7 @@ class LocalNotificationViewController: UIViewController {
         notification.body = "Temos algumas ofertas especiais para você"
         notification.banners = banners
         notification.category = "CARROUSSEL"
-        notification.carouselType = "TIME_MACHINE"
+        notification.carouselType = Categorys.PushCarouselStack.rawValue
         requestPushNotification(notification)
     }
     
@@ -157,7 +156,7 @@ class LocalNotificationViewController: UIViewController {
         notification.body = "Temos algumas ofertas especiais para você"
         notification.banners = banners
         notification.category = "CARROUSSEL"
-        notification.carouselType = "TIME_MACHINE_INVERTED"
+        notification.carouselType = Categorys.PushCarouselStackInverted.rawValue
         requestPushNotification(notification)
     }
     

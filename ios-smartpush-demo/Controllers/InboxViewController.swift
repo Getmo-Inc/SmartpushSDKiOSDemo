@@ -37,17 +37,14 @@ struct Aps:Codable {
     
     
     init(from decoder: Decoder) throws {
-        
         let containerAlert = try decoder.container(keyedBy: CodingKeys.self)
         if let value = try? containerAlert.decode(Alert.self, forKey: .alert) {
             alert = value
         }
-        
         let containerCategory = try decoder.container(keyedBy: CodingKeys.self)
         if let value = try? containerCategory.decode(String.self, forKey: .category) {
             category = value
         }
-        
         let container = try decoder.container(keyedBy: CodingKeys.self)
         if let value = try? container.decode(Int.self, forKey: .mutablecontent) {
             mutablecontent = String(value)

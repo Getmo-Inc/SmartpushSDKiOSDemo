@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNU
         shared?.didFinishLaunching(options: launchOptions)
         shared?.registerForPushNotifications()
         
-        GMSServices.provideAPIKey("AIzaSyA8MhV4bR87HRxEUULksAev2JswkeMYktY")
+        GMSServices.provideAPIKey("AIzaSyCe9QnOOA9wORi4tECDxdPZOyZ7PPQrq9E")
         
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().delegate = self
@@ -75,7 +75,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNU
         let token = deviceToken.map { String(format: "%02hhx", $0) }.joined()
         print("Token: \(token)")
     }
-    
     
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings){
         SmartpushSDK.sharedInstance().didRegister(notificationSettings)

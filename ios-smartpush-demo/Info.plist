@@ -19,18 +19,16 @@
 	<key>CFBundleShortVersionString</key>
 	<string>3.0.0</string>
 	<key>CFBundleVersion</key>
-	<string>7</string>
+	<string>14</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Ative a localização</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Ative a localização para uma melhor experiência</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Ative para aproveitar ao máximo a sua experiência</string>
 	<key>SMARTPUSH_AppGroupKey</key>
 	<string>group.smartpushsdk</string>
 	<key>SMARTPUSH_AppKey</key>

@@ -25,6 +25,7 @@
 		BA47060B21E534F000529CBE /* NotificationTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47060A21E534F000529CBE /* NotificationTypesViewController.swift */; };
 		BA8C4CDE21E65BFA0099AE50 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C4CDD21E65BFA0099AE50 /* InboxCell.swift */; };
 		BAAA7EF1E02F6C33546CCA1D /* Pods_ios_smartpush_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DCC51D14A1C42AF146B03F /* Pods_ios_smartpush_demoUITests.framework */; };
+		BAD3F402221B0F3300731C25 /* LocalNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3F401221B0F3300731C25 /* LocalNotificationViewController.swift */; };
 		BAE7D8DB21C0245200FB9930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8DA21C0245200FB9930 /* AppDelegate.swift */; };
 		BAE7D8DD21C0245200FB9930 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8DC21C0245200FB9930 /* HomeViewController.swift */; };
 		BAE7D8E021C0245200FB9930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE7D8DE21C0245200FB9930 /* Main.storyboard */; };
@@ -139,6 +140,7 @@
 		BA47060821E526B400529CBE /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		BA47060A21E534F000529CBE /* NotificationTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypesViewController.swift; sourceTree = "<group>"; };
 		BA8C4CDD21E65BFA0099AE50 /* InboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
+		BAD3F401221B0F3300731C25 /* LocalNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationViewController.swift; sourceTree = "<group>"; };
 		BAE7D8D721C0245200FB9930 /* ios-smartpush-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-smartpush-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE7D8DA21C0245200FB9930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAE7D8DC21C0245200FB9930 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				BA47060621E5267C00529CBE /* ShareViewController.swift */,
 				BA47060821E526B400529CBE /* SendViewController.swift */,
 				BA47060A21E534F000529CBE /* NotificationTypesViewController.swift */,
+				BAD3F401221B0F3300731C25 /* LocalNotificationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 				BAE7D8DB21C0245200FB9930 /* AppDelegate.swift in Sources */,
 				BA47060921E526B400529CBE /* SendViewController.swift in Sources */,
 				BA47060221E5199900529CBE /* Geofence.swift in Sources */,
+				BAD3F402221B0F3300731C25 /* LocalNotificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,7 +832,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -851,7 +855,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

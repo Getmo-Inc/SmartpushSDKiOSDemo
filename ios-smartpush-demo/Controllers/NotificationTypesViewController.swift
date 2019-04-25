@@ -16,55 +16,55 @@ class NotificationTypesViewController: UIViewController {
     }
     
     @IBAction func actionPushNormal(_ sender: UIButton) {
-        requestPushNotification(.PushNormal)
+        requestPushNotification(.PushNormalTest)
     }
     
     @IBAction func actionPushEmoji(_ sender: UIButton) {
-        requestPushNotification(.PushEmoji)
+        requestPushNotification(.PushEmojiTest)
     }
     
     @IBAction func actionPushImage(_ sender: UIButton) {
-        requestPushNotification(.PushImage)
+        requestPushNotification(.PushImageTest)
     }
     
     @IBAction func actionPushGif(_ sender: UIButton) {
-        requestPushNotification(.PushGif)
+        requestPushNotification(.PushGifTest)
     }
     
     @IBAction func actionPushAudio(_ sender: UIButton) {
-        requestPushNotification(.PushAudio)
+        requestPushNotification(.PushAudioTest)
     }
     
     @IBAction func actionPushVideo(_ sender: UIButton) {
-        requestPushNotification(.PushVideo)
+        requestPushNotification(.PushVideoTest)
     }
     
     @IBAction func actionPushCoverflow(_ sender: UIButton) {
-        requestPushNotification(.PushCarouselCoverflow)
+        requestPushNotification(.PushCarouselCoverflowTest)
     }
     
     @IBAction func actionPushRotary(_ sender: UIButton) {
-        requestPushNotification(.PushCarouselRotary)
+        requestPushNotification(.PushCarouselRotaryTest)
     }
     
     @IBAction func actionPushCylinder(_ sender: UIButton) {
-        requestPushNotification(.PushCarouselCylinder)
+        requestPushNotification(.PushCarouselCylinderTest)
     }
     
     @IBAction func actionPushCylinderInverted(_ sender: UIButton) {
-        requestPushNotification(.PushCarouselCylinderInverted)
+        requestPushNotification(.PushCarouselCylinderInvertedTest)
     }
     
     @IBAction func actionPushLinear(_ sender: UIButton) {
-        requestPushNotification(.PushCarouselLinear)
+        requestPushNotification(.PushCarouselLinearTest)
     }
     
     @IBAction func actionPushStack(_ sender: UIButton) {
-        requestPushNotification(.PushCarouselStack)
+        requestPushNotification(.PushCarouselStackTest)
     }
     
     @IBAction func actionPushStackInverted(_ sender: UIButton) {
-        requestPushNotification(.PushCarouselStackInverted)
+        requestPushNotification(.PushCarouselStackInvertedTest)
     }
     
     private func showError(){
@@ -75,12 +75,11 @@ class NotificationTypesViewController: UIViewController {
         UIAlertView(title: "Success", message: "Solicitação enviada", delegate: nil, cancelButtonTitle: "OK").show()
     }
     
-    private func requestPushNotification(_ type: NotificationType) {
+    private func requestPushNotification(_ type: NotificationTypeTest) {
         
-        SmartpushNotificationTest.requestNotification(by: type, isProd: false) { (success) in
+        SmartpushNotificationTest.requestNotification(by: type, isProd: true) { (success) in
             if success {
                 self.showSuccess()
-                
             } else {
                 self.showError()
             }

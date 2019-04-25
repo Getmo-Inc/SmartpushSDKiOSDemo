@@ -53,7 +53,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.3.6):
     - GoogleUtilities/Logger
-  - Kingfisher (5.0.0)
+  - Kingfisher (5.3.1)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -67,7 +67,7 @@ DEPENDENCIES:
   - Firebase/Core
   - GoogleMaps
   - GooglePlaces
-  - Kingfisher (~> 5.0)
+  - Kingfisher (~> 5.3)
   - SideMenu
 
 SPEC REPOS:
@@ -97,10 +97,10 @@ SPEC CHECKSUMS:
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
-  Kingfisher: 2b0dd651e4fe5a07305b8242fde56f8e2d410f58
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SideMenu: 87efd943737bb83aedf0358884d09fcf5576636d
 
-PODFILE CHECKSUM: cee4530bbcbe10be2122f793f0de0a49df5dbf7c
+PODFILE CHECKSUM: eb8f27fc1f4f6097187e1eff78781ce811cbc904
 
 COCOAPODS: 1.5.3

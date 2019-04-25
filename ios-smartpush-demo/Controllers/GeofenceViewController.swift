@@ -28,7 +28,7 @@ class GeofenceViewController: UIViewController, CLLocationManagerDelegate, GMSMa
         super.viewDidLoad()
         
         self.locationManager.delegate = self
-        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         self.locationManager.distanceFilter = 10
         self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters

@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tfTagValue: UITextField!
     @IBOutlet weak var swRemoveTag: UISwitch!
     @IBOutlet weak var swBlockUser: UISwitch!
+    @IBOutlet weak var lbStatusPush: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +37,8 @@ class HomeViewController: UIViewController {
         SideMenuManager.default.menuFadeStatusBar = false
         viewContainer.layer.shadowRadius = 4
         viewContainer.layer.cornerRadius = 4
-        viewContainer.isUserInteractionEnabled = false
-        switchDemo.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+        //viewContainer.isUserInteractionEnabled = false
+        swBlockUser.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(addTapped))
         
@@ -72,10 +73,32 @@ class HomeViewController: UIViewController {
     @objc func blockUser(){
         print("blockUser")
     }
-    
+
     @objc func addTapped() {
         self.performSegue(withIdentifier: "menu", sender: self)
     }
+    
+    private func showSuccess(){
+        UIAlertView(title: "Success", message: "Solicitação enviada", delegate: nil, cancelButtonTitle: "OK").show()
+    }
 
+    @IBAction func sendBlock(_ sender: Any) {
+        
+        let swh : UISwitch = sender as! UISwitch
+        if(swh.isOn){
+            SmartpushSDK.sharedInstance().blockUser(false)
+            lbStatusPush.text = "ACTIVE"
+            let green = UIColor(red: 0, green: 167.0/255.0, blue: 32.0/255.0, alpha: 1.0)
+            lbStatusPush.textColor = green
+            
+        } else {
+            lbStatusPush.text = "BLOCKED"
+            lbStatusPush.textColor = .red
+            SmartpushSDK.sharedInstance().blockUser(true)
+        }
+        
+        showSuccess()
+        
+    }
 }
 

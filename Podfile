@@ -14,7 +14,7 @@ target 'ios-smartpush-demo' do
     pod 'Crashlytics', '~> 3.12.0'
     pod 'GoogleMaps'
     pod 'GooglePlaces'
-    pod 'Kingfisher', '~> 5.0'
+    pod 'Kingfisher', '~> 5.3'
 
   target 'ios-smartpush-demoTests' do
     inherit! :search_paths

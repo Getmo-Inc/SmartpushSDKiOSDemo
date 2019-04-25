@@ -24,12 +24,12 @@ enum Categorys:String{
     PushCarouselStackInverted = "TIME_MACHINE_INVERTED"
 }
 
-let banner1 = "http://image.buscape.com//mobile//notifications//android//0110galax.png"
-let banner2 = "http://image.buscape.com/mobile/notifications/android/1512note.png"
-let banner3 = "http://image.buscape.com/mobile/notifications/android/1312phone.png"
-let banner4 = "http://image.buscape.com/mobile/notifications/android/1001cafeteira.png"
-let banner5 = "http://image.buscape.com/mobile/notifications/android/1304gela.png"
-let banner6 = "http://image.buscape.com//mobile//notifications//android//2507Tablet.png"
+let banner1 = "http://cdn.getmo.com.br/images/1512note.png"
+let banner2 = "http://cdn.getmo.com.br/images/1312phone.png"
+let banner3 = "http://cdn.getmo.com.br/images/2607fog.png"
+let banner4 = "http://cdn.getmo.com.br/images/1001cafeteira.png"
+let banner5 = "http://cdn.getmo.com.br/images/0110galax.png"
+let banner6 = "http://cdn.getmo.com.br/images/2507Tablet.png"
 let banners = [banner1, banner2, banner3, banner4, banner5, banner6];
 
 class LocalNotificationViewController: UIViewController {
@@ -58,7 +58,7 @@ class LocalNotificationViewController: UIViewController {
         let notification  = SmartpushNotification()
         notification.title = "Oferta"
         notification.body = "Temos algumas ofertas especiais para você"
-        notification.mediaUrl = "https://s.aolcdn.com/hss/storage/midas/b386937631a1f03665c1d57289070898/203417456/simpsons.jpg"
+        notification.mediaUrl = "http://cdn.getmo.com.br/images/1512note.png"
         notification.category = Categorys.PushImage.rawValue
         requestPushNotification(notification)
     }

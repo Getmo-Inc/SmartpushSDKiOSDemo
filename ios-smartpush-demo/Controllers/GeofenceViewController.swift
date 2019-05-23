@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 
 class GeofenceViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, UITextFieldDelegate {
 
@@ -19,10 +20,16 @@ class GeofenceViewController: UIViewController, CLLocationManagerDelegate, GMSMa
     @IBOutlet weak var tfLat: UITextField!
     @IBOutlet weak var tfLng: UITextField!
     @IBOutlet weak var btnSend: UIButton!
+    let zoom: Float = 14.0;
     
     var mapView : GMSMapView?
+    var circleRed: GMSCircle!
+    var marker:GMSMarker!
+    var latitude:Double=0
+    var longitude:Double=0
     let locationManager: CLLocationManager = CLLocationManager()
     var geofence = Geofence()
+    var centerMapCoordinate:CLLocationCoordinate2D!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,16 +39,11 @@ class GeofenceViewController: UIViewController, CLLocationManagerDelegate, GMSMa
         self.locationManager.startUpdatingLocation()
         self.locationManager.distanceFilter = 10
         self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        
-        self.mapView?.isMyLocationEnabled = true
-        self.mapView?.delegate = self
-        
-        tfLat.delegate = self
-        tfLng.delegate = self
 
-        let camera = GMSCameraPosition.camera(withLatitude: AppUtils.shared.latitude, longitude: AppUtils.shared.longitude, zoom: 13.0)
+        let camera = GMSCameraPosition.camera(withLatitude: AppUtils.shared.latitude, longitude: AppUtils.shared.longitude, zoom: zoom)
         mapView = GMSMapView.map(withFrame: UIScreen.main.bounds, camera: camera)
-        mapView?.isMyLocationEnabled = true
+        mapView?.isMyLocationEnabled = false
+        mapView?.isUserInteractionEnabled = true
         
         let location = CLLocationCoordinate2D(latitude: AppUtils.shared.latitude, longitude: AppUtils.shared.longitude)
         let marker = GMSMarker.init(position: location)
@@ -49,9 +51,8 @@ class GeofenceViewController: UIViewController, CLLocationManagerDelegate, GMSMa
         marker.map = self.mapView
         
         mapView?.center = self.view.center
-        
+        self.mapView?.delegate = self
         self.view.addSubview(mapView!)
-        
         
         let locationGeo = CLLocationCoordinate2D(latitude: AppUtils.shared.latitude, longitude: AppUtils.shared.longitude)
         let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: locationGeo, radius: 500, identifier: "Push")
@@ -62,38 +63,25 @@ class GeofenceViewController: UIViewController, CLLocationManagerDelegate, GMSMa
         cirlce.map = self.mapView!
         
         self.view.addSubview(self.viewLatLng!)
-        self.viewLatLng.addSubview(tfLat!)
-        self.viewLatLng.addSubview(tfLng!)
-        self.viewLatLng.addSubview(lbLocation!)
-        self.viewLatLng.addSubview(lbLat!)
-        self.viewLatLng.addSubview(lbLong!)
         self.viewLatLng.addSubview(btnSend!)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil);
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil);
-
-        //Set TECNOPUC location
-        tfLat.text = "-30.059047"
-        tfLng.text = "-51.171546"
-
     }
     
     @IBAction func sendLatLng(_ sender: UIButton) {
-        guard let lat = Double(tfLat.text ?? "") else {
-            showError()
-            return
-        }
-        guard let lng = Double(tfLng.text ?? "") else {
-            showError()
-            return
-        }
+//        guard let lat = Double(tfLat.text ?? "") else {
+//            showError()
+//            return
+//        }
+//        guard let lng = Double(tfLng.text ?? "") else {
+//            showError()
+//            return
+//        }
         
-        AppUtils.shared.latitude = lat
-        AppUtils.shared.longitude = lng
+//        AppUtils.shared.latitude = latitude
+//        AppUtils.shared.longitude = longitude
         
-        self.centralizeMap()
+//        self.centralizeMap()
         
-        SmartpushSDK.sharedInstance().nearestZone(withLatitude: lat, andLongitude: lng)
+        SmartpushSDK.sharedInstance().nearestZone(withLatitude: latitude, andLongitude: longitude)
         
         showSuccess()
     }
@@ -111,41 +99,53 @@ class GeofenceViewController: UIViewController, CLLocationManagerDelegate, GMSMa
     }
     
     private func showSuccess(){
-        UIAlertView(title: "Success", message: "Solicitação enviada", delegate: nil, cancelButtonTitle: "OK").show()
+        
+        let message = "Solicitação enviada lat: \(latitude) longitude:\(longitude) "
+        
+        UIAlertView(title: "Success", message: message, delegate: nil, cancelButtonTitle: "OK").show()
     }
     
     func centralizeMap() {
-        let camera = GMSCameraPosition.camera(withLatitude: AppUtils.shared.latitude, longitude: AppUtils.shared.longitude, zoom: 13.0)
+        let camera = GMSCameraPosition.camera(withLatitude: AppUtils.shared.latitude, longitude: AppUtils.shared.longitude, zoom: zoom)
         mapView?.animate(to: camera)
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last
-        let camera = GMSCameraPosition.camera(withLatitude: AppUtils.shared.latitude, longitude: AppUtils.shared.longitude, zoom: 13.0)
-        
-        //let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
+        let camera = GMSCameraPosition.camera(withLatitude: AppUtils.shared.latitude, longitude: AppUtils.shared.longitude, zoom: zoom)
         mapView?.animate(to: camera)
-        
-        
     }
     
-    @objc func keyboardWillShow() {
-        self.view.frame.origin.y = -230 // Move view 150 points upward
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        let latitude = mapView.camera.target.latitude
+        let longitude = mapView.camera.target.longitude
+        self.latitude = latitude
+        self.longitude = longitude
+        centerMapCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        self.placeMarkerOnCenter(centerMapCoordinate:centerMapCoordinate)
     }
     
-    @objc func keyboardWillHide() {
-        self.view.frame.origin.y = 0 // Move view to original position
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
     }
     
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.becomeFirstResponder()
+    func placeMarkerOnCenter(centerMapCoordinate:CLLocationCoordinate2D) {
+        if marker == nil {
+            marker = GMSMarker()
+        }
+        marker.position = centerMapCoordinate
+        let imageIcon =  UIImage.init(named: "man")
+        marker.icon = self.image(imageIcon!, scaledToSize: CGSize(width: 30, height: 30))
+        marker.map = self.mapView
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true;
+    fileprivate func image(_ originalImage:UIImage, scaledToSize:CGSize) -> UIImage {
+        if originalImage.size.equalTo(scaledToSize) {
+            return originalImage
+        }
+        UIGraphicsBeginImageContextWithOptions(scaledToSize, false, 0.0)
+        originalImage.draw(in: CGRect(x: 0, y: 0, width: scaledToSize.width, height: scaledToSize.height))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
     }
     
 }

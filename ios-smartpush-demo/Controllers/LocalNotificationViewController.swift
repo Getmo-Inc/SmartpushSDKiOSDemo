@@ -85,7 +85,7 @@ class LocalNotificationViewController: UIViewController {
         let notification  = SmartpushNotification()
         notification.title = "Oferta"
         notification.body = "Temos algumas ofertas especiais para você"
-        notification.mediaUrl = "0S6pHex-KCo"
+        notification.mediaUrl = "i4YRWxaFjZo"
         notification.category = Categorys.PushVideo.rawValue
         requestPushNotification(notification)
     }

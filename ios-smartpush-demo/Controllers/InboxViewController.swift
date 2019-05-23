@@ -125,7 +125,6 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @objc func refreshData(){
         refreshControl.beginRefreshing()
         do {
-            //let data = SmartpushSDK.sharedInstance().getUnreadNotifications()?.dataResponse!
             let data = SmartpushSDK.sharedInstance().getLastNotifications()?.dataResponse!
             if data != nil {
                 let nots = try JSONDecoder().decode([NotificationsCore].self, from:data!)
@@ -136,7 +135,7 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             }
         } catch let err {
-            print("erro ao acessar notificações", err)
+            print("Erro ao acessar notificações", err)
         }
     }
     
@@ -177,6 +176,7 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // para marcar a notification como lida
         //let obj = self.notifications[indexPath.row]
         //SmartpushSDK.sharedInstance()?.markPush(asRead: obj.pushid)
+        SmartpushSDK.sharedInstance()?.markAllAsRead()
         
         let obj = self.notifications[indexPath.row]
         SmartpushSDK.sharedInstance()?.requestExtraContent(for: obj.pushid)

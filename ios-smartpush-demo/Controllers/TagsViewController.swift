@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 /**
  * Neste exemplo foi utilizada uma TAG do tipo LIST.

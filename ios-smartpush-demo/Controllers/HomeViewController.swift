@@ -11,15 +11,11 @@ import SideMenu
 
 class HomeViewController: UIViewController {
     
-    //@IBOutlet weak var environmentSeg: UISegmentedControl!
-    
     @IBOutlet weak var lbHardwareId: UILabel!
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var lbAliasId: UILabel!
     @IBOutlet weak var spinnerAliasId: UIActivityIndicatorView!
     @IBOutlet weak var spinnerHardwareId: UIActivityIndicatorView!
-    //@IBOutlet weak var lbRegisterId: UILabel!
-    //@IBOutlet weak var spinnerRegisterId: UIActivityIndicatorView!
     @IBOutlet weak var switchDemo: UISwitch!
     @IBOutlet weak var optionTag: UISegmentedControl!
     @IBOutlet weak var tfTagKey: UITextField!
@@ -37,7 +33,6 @@ class HomeViewController: UIViewController {
         SideMenuManager.default.menuFadeStatusBar = false
         viewContainer.layer.shadowRadius = 4
         viewContainer.layer.cornerRadius = 4
-        //viewContainer.isUserInteractionEnabled = false
         swBlockUser.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(addTapped))
@@ -50,7 +45,7 @@ class HomeViewController: UIViewController {
         
         //Add observer block user
         NotificationCenter.default.addObserver(self, selector: #selector(self.blockUser), name: NSNotification.Name.SmartpushSDKBlockUser, object: nil)
-
+        
     }
 
     @objc func addedDevice(){
@@ -62,6 +57,7 @@ class HomeViewController: UIViewController {
         AppUtils.shared.hwid = SmartpushSDK.sharedInstance().getDevice().hwid
         
         SmartpushSDK.sharedInstance().requestCurretUserInformation()
+
     }
     
     @objc func userInfo(){

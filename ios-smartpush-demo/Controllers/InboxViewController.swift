@@ -90,7 +90,6 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
     weak var refreshControl: UIRefreshControl!
     @IBOutlet var tableView: UITableView!
     var notifications = [NotificationsCore]()
-    var testeCarlos: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()

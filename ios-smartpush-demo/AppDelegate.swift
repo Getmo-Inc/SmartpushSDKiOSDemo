@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import GoogleMaps
+import SideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNUserNotificationCenterDelegate  {
@@ -55,6 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNU
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]){
         SmartpushSDK.sharedInstance().didReceiveRemoteNotification(userInfo)
+        print(userInfo)
     }
     
     func onPushAccepted(_ push: [AnyHashable: Any]!, andOpenFromPush openFromPush: Bool) {
@@ -76,8 +78,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNU
         print("Token: \(token)")
     }
     
-    
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings){
         SmartpushSDK.sharedInstance().didRegister(notificationSettings)
+    }
+    
+    func application(_ application: UIApplication, continue userActivity:NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        guard let url = userActivity.webpageURL else {return false}
+        
+//        print(url.absoluteString)
+//
+//        if let fingerprint = SmartpushSDK.sharedInstance()?.deviceFingerPrint {
+//            print(fingerprint)
+//        }
+    
+        return false
     }
 }

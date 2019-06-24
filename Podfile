@@ -1,5 +1,7 @@
 # Uncomment the next line to define a global platform for your project
  platform :ios, '10.0'
+source 'https://Carlscorrea@bitbucket.org/getmo/ios-singlelink-sdk.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'ios-smartpush-demo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -15,6 +17,8 @@ target 'ios-smartpush-demo' do
     pod 'GoogleMaps'
     pod 'GooglePlaces'
     pod 'Kingfisher', '~> 5.3'
+    #pod 'SingleLink', '~> 0.1.2'
+    pod 'SingleLink', :git => 'https://Carlscorrea@bitbucket.org/getmo/ios-singlelink-sdk.git'
 
   target 'ios-smartpush-demoTests' do
     inherit! :search_paths

@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import GoogleMaps
+import SingleLink
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNUserNotificationCenterDelegate  {
@@ -24,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNU
             }
             print("******************************************************")
         }
+        
+            
+        let singleLink = SingleLink()
+        singleLink.trackOnCreate()
         
         let shared = SmartpushSDK.sharedInstance()
         shared?.delegate = self

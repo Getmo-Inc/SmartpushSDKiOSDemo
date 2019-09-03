@@ -26,9 +26,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNU
             print("******************************************************")
         }
         
-            
-        let singleLink = SingleLink()
-        singleLink.trackOnCreate()
+        if (!(UserDefaults.standard.value(forKey:"HasLaunchedOnce") != nil))
+        {
+            UserDefaults.standard.set(true, forKey: "HasLaunchedOnce");
+            UserDefaults.standard.synchronize()
+            SingleLink.sharedInstance()?.trackOnInstall()
+        }
+        
+        SingleLink.sharedInstance()?.trackOnCreate()
+        
+        let dict = ["key": "Go getmo!"]
+        SingleLink.sharedInstance()?.trackEvent("CLICK", withDict: dict)
         
         let shared = SmartpushSDK.sharedInstance()
         shared?.delegate = self
@@ -52,10 +60,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNU
     
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
-        let application = UIApplication.shared
-        
         completionHandler([.alert, .badge, .sound])
+    }
+    
+    func application(_ application: UIApplication, continue userActivity:NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+    
+        guard let url = userActivity.webpageURL else {return false}
+        
+        return true
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]){

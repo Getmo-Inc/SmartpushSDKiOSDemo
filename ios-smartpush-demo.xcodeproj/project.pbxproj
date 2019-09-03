@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,8 +23,11 @@
 		BA47060721E5267C00529CBE /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47060621E5267C00529CBE /* ShareViewController.swift */; };
 		BA47060921E526B400529CBE /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47060821E526B400529CBE /* SendViewController.swift */; };
 		BA47060B21E534F000529CBE /* NotificationTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47060A21E534F000529CBE /* NotificationTypesViewController.swift */; };
+		BA75DF9E22C6A9B8000F386E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA75DF9D22C6A9B8000F386E /* AdSupport.framework */; };
+		BA75DFA022C6A9BE000F386E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA75DF9F22C6A9BE000F386E /* CoreTelephony.framework */; };
 		BA8C4CDE21E65BFA0099AE50 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C4CDD21E65BFA0099AE50 /* InboxCell.swift */; };
 		BAAA7EF1E02F6C33546CCA1D /* Pods_ios_smartpush_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DCC51D14A1C42AF146B03F /* Pods_ios_smartpush_demoUITests.framework */; };
+		BAAC9A9022EF3F3000C46B72 /* CSSProfileCached.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAC9A8F22EF3F3000C46B72 /* CSSProfileCached.swift */; };
 		BAD3F402221B0F3300731C25 /* LocalNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3F401221B0F3300731C25 /* LocalNotificationViewController.swift */; };
 		BAE7D8DB21C0245200FB9930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8DA21C0245200FB9930 /* AppDelegate.swift */; };
 		BAE7D8DD21C0245200FB9930 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8DC21C0245200FB9930 /* HomeViewController.swift */; };
@@ -139,7 +142,10 @@
 		BA47060621E5267C00529CBE /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		BA47060821E526B400529CBE /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		BA47060A21E534F000529CBE /* NotificationTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypesViewController.swift; sourceTree = "<group>"; };
+		BA75DF9D22C6A9B8000F386E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		BA75DF9F22C6A9BE000F386E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		BA8C4CDD21E65BFA0099AE50 /* InboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
+		BAAC9A8F22EF3F3000C46B72 /* CSSProfileCached.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSProfileCached.swift; sourceTree = "<group>"; };
 		BAD3F401221B0F3300731C25 /* LocalNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationViewController.swift; sourceTree = "<group>"; };
 		BAE7D8D721C0245200FB9930 /* ios-smartpush-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-smartpush-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE7D8DA21C0245200FB9930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +171,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA75DFA022C6A9BE000F386E /* CoreTelephony.framework in Frameworks */,
+				BA75DF9E22C6A9B8000F386E /* AdSupport.framework in Frameworks */,
 				B4456EE7174CF3534A7E3FE1 /* Pods_ios_smartpush_demo.framework in Frameworks */,
 				BA4126C421E3DECE0058E737 /* SmartpushSDK.framework in Frameworks */,
 			);
@@ -192,6 +200,8 @@
 		3ECCCFCB41DFC7B6CD788D3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA75DF9F22C6A9BE000F386E /* CoreTelephony.framework */,
+				BA75DF9D22C6A9B8000F386E /* AdSupport.framework */,
 				FEE4639A842CCD447C02A510 /* Pods_ios_smartpush_demo.framework */,
 				E961BE1E269FA3741D0F7EDE /* Pods_ios_smartpush_demoTests.framework */,
 				F4DCC51D14A1C42AF146B03F /* Pods_ios_smartpush_demoUITests.framework */,
@@ -263,6 +273,7 @@
 				BAE7D8E121C0245500FB9930 /* Assets.xcassets */,
 				BAE7D8E321C0245500FB9930 /* LaunchScreen.storyboard */,
 				BAE7D8E621C0245500FB9930 /* Info.plist */,
+				BAAC9A8F22EF3F3000C46B72 /* CSSProfileCached.swift */,
 			);
 			path = "ios-smartpush-demo";
 			sourceTree = "<group>";
@@ -601,6 +612,7 @@
 				BA8C4CDE21E65BFA0099AE50 /* InboxCell.swift in Sources */,
 				BAE7D8DD21C0245200FB9930 /* HomeViewController.swift in Sources */,
 				BA4705FD21E4D09000529CBE /* GeofenceViewController.swift in Sources */,
+				BAAC9A9022EF3F3000C46B72 /* CSSProfileCached.swift in Sources */,
 				BA03F2EF21F23C3400D1FCD3 /* Tags.swift in Sources */,
 				BA47060521E51AE500529CBE /* AppUtils.swift in Sources */,
 				BA4126DB21E4233E0058E737 /* TagsViewController.swift in Sources */,
@@ -802,7 +814,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -825,7 +837,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

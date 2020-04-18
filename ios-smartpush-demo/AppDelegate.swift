@@ -70,7 +70,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SmartpushSDKDelegate, UNU
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
+        
         SmartpushSDK.sharedInstance().didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
+        
+//        print((deviceToken as NSData).description)
         
         let token = deviceToken.map { String(format: "%02hhx", $0) }.joined()
         print("Token: \(token)")

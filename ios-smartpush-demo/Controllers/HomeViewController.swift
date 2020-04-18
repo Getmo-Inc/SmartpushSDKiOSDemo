@@ -7,40 +7,37 @@
 //
 
 import UIKit
-import SideMenu
 
-class HomeViewController: UIViewController {
-    
-    //@IBOutlet weak var environmentSeg: UISegmentedControl!
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var lbHardwareId: UILabel!
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var lbAliasId: UILabel!
     @IBOutlet weak var spinnerAliasId: UIActivityIndicatorView!
     @IBOutlet weak var spinnerHardwareId: UIActivityIndicatorView!
-    //@IBOutlet weak var lbRegisterId: UILabel!
-    //@IBOutlet weak var spinnerRegisterId: UIActivityIndicatorView!
-    @IBOutlet weak var switchDemo: UISwitch!
-    @IBOutlet weak var optionTag: UISegmentedControl!
-    @IBOutlet weak var tfTagKey: UITextField!
-    @IBOutlet weak var tfTagValue: UITextField!
-    @IBOutlet weak var swRemoveTag: UISwitch!
     @IBOutlet weak var swBlockUser: UISwitch!
     @IBOutlet weak var lbStatusPush: UILabel!
+    @IBOutlet weak var menuTableView: UITableView!
+    
+    @IBOutlet  weak var leadingC: NSLayoutConstraint!
+    @IBOutlet  weak var trailingC: NSLayoutConstraint!
+    
+    let objectArray = ["Tags", "Geofence", "Inbox", "Notificações", "Notificações Locais"]
+
+    var urlString:String?
+    var menuVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SideMenuManager.default.menuPresentMode = .menuSlideIn
-        SideMenuManager.default.menuShadowOpacity = 0.5
-        SideMenuManager.default.menuEnableSwipeGestures = true
-        SideMenuManager.default.menuFadeStatusBar = false
+        menuTableView.delegate = self
+        menuTableView.dataSource = self
+        
+        leadingC.constant = 0
+        
         viewContainer.layer.shadowRadius = 4
         viewContainer.layer.cornerRadius = 4
-        //viewContainer.isUserInteractionEnabled = false
         swBlockUser.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(addTapped))
         
         //Add observer get device
         NotificationCenter.default.addObserver(self, selector: #selector(self.addedDevice), name: NSNotification.Name.SmartpushSDKDeviceAdded, object: nil)
@@ -74,8 +71,28 @@ class HomeViewController: UIViewController {
         print("blockUser")
     }
 
-    @objc func addTapped() {
-        self.performSegue(withIdentifier: "menu", sender: self)
+    @IBAction func menuButton(_ sender: Any) {
+        
+        if !menuVisible {
+            leadingC.constant = 250
+            trailingC.constant = 250
+            menuVisible = true
+            
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveLinear, animations: {self.view.layoutIfNeeded()
+            }) {(animationComplete) in
+                print("Animation completed!")
+            }
+        } else {
+            leadingC.constant = 0
+            trailingC.constant = 0
+            menuVisible = false
+            
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveLinear, animations: {self.view.layoutIfNeeded()
+            }) {(animationComplete) in
+                print("Animation completed!")
+            }
+        }
+        
     }
     
     private func showSuccess(){
@@ -100,5 +117,49 @@ class HomeViewController: UIViewController {
         showSuccess()
         
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.objectArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "menuTableViewCell") as? MenuTableViewCell {
+            cell.menuLabel.text = self.objectArray[indexPath.row]
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        switch self.objectArray[indexPath.row] {
+            case "Tags":
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "tagsViewController") as! TagsViewController
+                newViewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            case "Geofence":
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "geofenceViewController") as! GeofenceViewController
+                newViewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            case "Inbox":
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "inboxViewController") as! InboxViewController
+                newViewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            case "Notificações":
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "notificationTypesViewController") as! NotificationTypesViewController
+                newViewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            default:
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "localNotificationViewController") as! LocalNotificationViewController
+                newViewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(newViewController, animated: true)
+        }
+        
+    }
+    
 }
 

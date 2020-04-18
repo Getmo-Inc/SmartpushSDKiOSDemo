@@ -6,7 +6,6 @@ target 'ios-smartpush-demo' do
   use_frameworks!
 
   # Pods for ios-smartpush-demo
-    pod 'SideMenu'
     pod 'GoogleMaps'
     pod 'GooglePlaces'
     pod 'Firebase/Core'

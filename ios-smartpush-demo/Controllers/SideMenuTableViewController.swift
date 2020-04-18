@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SideMenu
 
 class SideMenuTableViewController: UITableViewController {
 
@@ -17,12 +16,5 @@ class SideMenuTableViewController: UITableViewController {
         tableView.reloadData()
         
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! UITableViewVibrantCell
-        cell.blurEffectStyle = SideMenuManager.default.menuBlurEffectStyle
-        return cell
-    }
-
 
 }

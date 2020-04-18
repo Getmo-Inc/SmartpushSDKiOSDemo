@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0113C82DD06D00F5F9570502 /* Pods_ios_smartpush_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E961BE1E269FA3741D0F7EDE /* Pods_ios_smartpush_demoTests.framework */; };
 		B4456EE7174CF3534A7E3FE1 /* Pods_ios_smartpush_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE4639A842CCD447C02A510 /* Pods_ios_smartpush_demo.framework */; };
 		BA03F2EF21F23C3400D1FCD3 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03F2EE21F23C3400D1FCD3 /* Tags.swift */; };
-		BA41266D21C414AC0058E737 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41266C21C414AC0058E737 /* SideMenuTableViewController.swift */; };
 		BA4126C421E3DECE0058E737 /* SmartpushSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4126BF21E3DB1A0058E737 /* SmartpushSDK.framework */; };
 		BA4126C521E3DECE0058E737 /* SmartpushSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA4126BF21E3DB1A0058E737 /* SmartpushSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA4126C821E3DECE0058E737 /* SmartpushNotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA4126C121E3DB1A0058E737 /* SmartpushNotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -33,6 +32,8 @@
 		BAE7D8E521C0245500FB9930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE7D8E321C0245500FB9930 /* LaunchScreen.storyboard */; };
 		BAE7D8F021C0245500FB9930 /* ios_smartpush_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8EF21C0245500FB9930 /* ios_smartpush_demoTests.swift */; };
 		BAE7D8FB21C0245500FB9930 /* ios_smartpush_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8FA21C0245500FB9930 /* ios_smartpush_demoUITests.swift */; };
+		D48555AB244BA9E0001D07C4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48555AA244BA9E0001D07C4 /* MenuTableViewCell.swift */; };
+		D4E7DBF924140AD800C1D425 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7DBF824140AD800C1D425 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,7 +128,6 @@
 		A6CCA549850FEB2974DBF843 /* Pods-ios-smartpush-demoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-smartpush-demoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-smartpush-demoTests/Pods-ios-smartpush-demoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7D93D9B594C712ADCA9D526 /* Pods-ios-smartpush-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-smartpush-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo.release.xcconfig"; sourceTree = "<group>"; };
 		BA03F2EE21F23C3400D1FCD3 /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
-		BA41266C21C414AC0058E737 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SmartpushSDK.xcodeproj; path = ../SmartpushSDKiOS/SmartpushSDK.xcodeproj; sourceTree = "<group>"; };
 		BA4126D021E3DFBF0058E737 /* ios-smartpush-demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-smartpush-demo.entitlements"; sourceTree = "<group>"; };
 		BA4126D321E3E7320058E737 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -155,6 +155,8 @@
 		BAE7D8FA21C0245500FB9930 /* ios_smartpush_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_smartpush_demoUITests.swift; sourceTree = "<group>"; };
 		BAE7D8FC21C0245500FB9930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46171A534F41C91CB9F62DB /* Pods-ios-smartpush-demoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-smartpush-demoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-smartpush-demoUITests/Pods-ios-smartpush-demoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D48555AA244BA9E0001D07C4 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		D4E7DBF824140AD800C1D425 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E961BE1E269FA3741D0F7EDE /* Pods_ios_smartpush_demoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_smartpush_demoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DCC51D14A1C42AF146B03F /* Pods_ios_smartpush_demoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_smartpush_demoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE4639A842CCD447C02A510 /* Pods_ios_smartpush_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_smartpush_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +224,7 @@
 		BA47060D21E5350C00529CBE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D48555A9244BA9BF001D07C4 /* Cell */,
 				BAE7D8DE21C0245200FB9930 /* Main.storyboard */,
 				BA8C4CDD21E65BFA0099AE50 /* InboxCell.swift */,
 			);
@@ -288,7 +291,6 @@
 		BAE99EC021C3D6CC00023B21 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BA41266C21C414AC0058E737 /* SideMenuTableViewController.swift */,
 				BAE7D8DC21C0245200FB9930 /* HomeViewController.swift */,
 				BA4126DA21E4233E0058E737 /* TagsViewController.swift */,
 				BA4705FA21E4D07C00529CBE /* InboxViewController.swift */,
@@ -297,8 +299,17 @@
 				BA47060821E526B400529CBE /* SendViewController.swift */,
 				BA47060A21E534F000529CBE /* NotificationTypesViewController.swift */,
 				BAD3F401221B0F3300731C25 /* LocalNotificationViewController.swift */,
+				D4E7DBF824140AD800C1D425 /* RootViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D48555A9244BA9BF001D07C4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D48555AA244BA9E0001D07C4 /* MenuTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DB0753CFBAAB739EC9D924C0 /* Pods */ = {
@@ -539,26 +550,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BBC54CE61D39D1A91537CC73 /* [CP] Check Pods Manifest.lock */ = {
@@ -589,22 +589,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -619,10 +612,11 @@
 				BA8C4CDE21E65BFA0099AE50 /* InboxCell.swift in Sources */,
 				BAE7D8DD21C0245200FB9930 /* HomeViewController.swift in Sources */,
 				BA4705FD21E4D09000529CBE /* GeofenceViewController.swift in Sources */,
+				D4E7DBF924140AD800C1D425 /* RootViewController.swift in Sources */,
 				BA03F2EF21F23C3400D1FCD3 /* Tags.swift in Sources */,
 				BA47060521E51AE500529CBE /* AppUtils.swift in Sources */,
 				BA4126DB21E4233E0058E737 /* TagsViewController.swift in Sources */,
-				BA41266D21C414AC0058E737 /* SideMenuTableViewController.swift in Sources */,
+				D48555AB244BA9E0001D07C4 /* MenuTableViewCell.swift in Sources */,
 				BA47060721E5267C00529CBE /* ShareViewController.swift in Sources */,
 				BAE7D8DB21C0245200FB9930 /* AppDelegate.swift in Sources */,
 				BA47060921E526B400529CBE /* SendViewController.swift in Sources */,
@@ -819,8 +813,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -828,8 +824,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 13.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -842,8 +840,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -851,8 +851,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 13.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -865,6 +867,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				INFOPLIST_FILE = "ios-smartpush-demoTests/Info.plist";
@@ -887,6 +890,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				INFOPLIST_FILE = "ios-smartpush-demoTests/Info.plist";
@@ -908,6 +912,7 @@
 			baseConfigurationReference = C46171A534F41C91CB9F62DB /* Pods-ios-smartpush-demoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				INFOPLIST_FILE = "ios-smartpush-demoUITests/Info.plist";
@@ -929,6 +934,7 @@
 			baseConfigurationReference = 3CEDD8A3AD9CE74D8EF20BC7 /* Pods-ios-smartpush-demoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				INFOPLIST_FILE = "ios-smartpush-demoUITests/Info.plist";

@@ -117,6 +117,9 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //SmartpushSDK.sharedInstance()?.requestUnreadNotifications()
 
     }
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @objc func showExtraContent(){
         print((SmartpushSDK.sharedInstance().getExtraContent()?.dataString!)!)

@@ -77,7 +77,7 @@ class NotificationTypesViewController: UIViewController {
     
     private func requestPushNotification(_ type: NotificationTypeTest) {
         
-        SmartpushNotificationTest.requestNotification(by: type, isProd: false) { (success) in
+        SmartpushNotificationTest.requestNotification(by: type, isProd: true) { (success) in
             if success {
                 self.showSuccess()
             } else {

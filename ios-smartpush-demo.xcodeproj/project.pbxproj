@@ -10,10 +10,6 @@
 		0113C82DD06D00F5F9570502 /* Pods_ios_smartpush_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E961BE1E269FA3741D0F7EDE /* Pods_ios_smartpush_demoTests.framework */; };
 		B4456EE7174CF3534A7E3FE1 /* Pods_ios_smartpush_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE4639A842CCD447C02A510 /* Pods_ios_smartpush_demo.framework */; };
 		BA03F2EF21F23C3400D1FCD3 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03F2EE21F23C3400D1FCD3 /* Tags.swift */; };
-		BA4126C421E3DECE0058E737 /* SmartpushSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4126BF21E3DB1A0058E737 /* SmartpushSDK.framework */; };
-		BA4126C521E3DECE0058E737 /* SmartpushSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA4126BF21E3DB1A0058E737 /* SmartpushSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BA4126C821E3DECE0058E737 /* SmartpushNotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA4126C121E3DB1A0058E737 /* SmartpushNotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		BA4126CB21E3DECE0058E737 /* SmartpushNotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA4126C321E3DB1A0058E737 /* SmartpushNotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BA4126DB21E4233E0058E737 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4126DA21E4233E0058E737 /* TagsViewController.swift */; };
 		BA4705FB21E4D07C00529CBE /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4705FA21E4D07C00529CBE /* InboxViewController.swift */; };
 		BA4705FD21E4D09000529CBE /* GeofenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4705FC21E4D09000529CBE /* GeofenceViewController.swift */; };
@@ -34,51 +30,13 @@
 		BAE7D8FB21C0245500FB9930 /* ios_smartpush_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE7D8FA21C0245500FB9930 /* ios_smartpush_demoUITests.swift */; };
 		D48555AB244BA9E0001D07C4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48555AA244BA9E0001D07C4 /* MenuTableViewCell.swift */; };
 		D4E7DBF924140AD800C1D425 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7DBF824140AD800C1D425 /* RootViewController.swift */; };
+		FA497AB3244BC3B00090AE71 /* SmartpushNotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA497AAE244BC3520090AE71 /* SmartpushNotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FA497AB4244BC3B00090AE71 /* SmartpushNotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA497AAC244BC3520090AE71 /* SmartpushNotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FA497AB5244BC3B00090AE71 /* SmartpushSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA497AAA244BC3520090AE71 /* SmartpushSDK.framework */; };
+		FA497AB6244BC3B00090AE71 /* SmartpushSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA497AAA244BC3520090AE71 /* SmartpushSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BA4126BE21E3DB1A0058E737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FAD96E301F3D550D004E828C;
-			remoteInfo = SmartpushSDK;
-		};
-		BA4126C021E3DB1A0058E737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FAC36C901F42784A00708DC1;
-			remoteInfo = SmartpushNotificationExtension;
-		};
-		BA4126C221E3DB1A0058E737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FAA0F26A1F45533A00473E93;
-			remoteInfo = SmartpushNotificationContent;
-		};
-		BA4126C621E3DECE0058E737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FAD96E2F1F3D550D004E828C;
-			remoteInfo = SmartpushSDK;
-		};
-		BA4126C921E3DECE0058E737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FAC36C8F1F42784A00708DC1;
-			remoteInfo = SmartpushNotificationExtension;
-		};
-		BA4126CC21E3DECE0058E737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FAA0F2691F45533A00473E93;
-			remoteInfo = SmartpushNotificationContent;
-		};
 		BAE7D8EC21C0245500FB9930 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BAE7D8CF21C0245200FB9930 /* Project object */;
@@ -93,6 +51,27 @@
 			remoteGlobalIDString = BAE7D8D621C0245200FB9930;
 			remoteInfo = "ios-smartpush-demo";
 		};
+		FA497AA9244BC3520090AE71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA497AA3244BC3520090AE71 /* SmartpushSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAD96E301F3D550D004E828C;
+			remoteInfo = SmartpushSDK;
+		};
+		FA497AAB244BC3520090AE71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA497AA3244BC3520090AE71 /* SmartpushSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAC36C901F42784A00708DC1;
+			remoteInfo = SmartpushNotificationExtension;
+		};
+		FA497AAD244BC3520090AE71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA497AA3244BC3520090AE71 /* SmartpushSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAA0F26A1F45533A00473E93;
+			remoteInfo = SmartpushNotificationContent;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -102,7 +81,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BA4126C521E3DECE0058E737 /* SmartpushSDK.framework in Embed Frameworks */,
+				FA497AB6244BC3B00090AE71 /* SmartpushSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,8 +92,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BA4126C821E3DECE0058E737 /* SmartpushNotificationExtension.appex in Embed App Extensions */,
-				BA4126CB21E3DECE0058E737 /* SmartpushNotificationContent.appex in Embed App Extensions */,
+				FA497AB3244BC3B00090AE71 /* SmartpushNotificationContent.appex in Embed App Extensions */,
+				FA497AB4244BC3B00090AE71 /* SmartpushNotificationExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +107,6 @@
 		A6CCA549850FEB2974DBF843 /* Pods-ios-smartpush-demoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-smartpush-demoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-smartpush-demoTests/Pods-ios-smartpush-demoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7D93D9B594C712ADCA9D526 /* Pods-ios-smartpush-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-smartpush-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-smartpush-demo/Pods-ios-smartpush-demo.release.xcconfig"; sourceTree = "<group>"; };
 		BA03F2EE21F23C3400D1FCD3 /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
-		BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SmartpushSDK.xcodeproj; path = ../SmartpushSDKiOS/SmartpushSDK.xcodeproj; sourceTree = "<group>"; };
 		BA4126D021E3DFBF0058E737 /* ios-smartpush-demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-smartpush-demo.entitlements"; sourceTree = "<group>"; };
 		BA4126D321E3E7320058E737 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		BA4126DA21E4233E0058E737 /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +137,7 @@
 		D4E7DBF824140AD800C1D425 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E961BE1E269FA3741D0F7EDE /* Pods_ios_smartpush_demoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_smartpush_demoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DCC51D14A1C42AF146B03F /* Pods_ios_smartpush_demoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_smartpush_demoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA497AA3244BC3520090AE71 /* SmartpushSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SmartpushSDK.xcodeproj; path = SmartpushSDKiOS/SmartpushSDK.xcodeproj; sourceTree = "<group>"; };
 		FEE4639A842CCD447C02A510 /* Pods_ios_smartpush_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_smartpush_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4456EE7174CF3534A7E3FE1 /* Pods_ios_smartpush_demo.framework in Frameworks */,
-				BA4126C421E3DECE0058E737 /* SmartpushSDK.framework in Frameworks */,
+				FA497AB5244BC3B00090AE71 /* SmartpushSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,16 +180,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BA4126B921E3DB190058E737 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BA4126BF21E3DB1A0058E737 /* SmartpushSDK.framework */,
-				BA4126C121E3DB1A0058E737 /* SmartpushNotificationExtension.appex */,
-				BA4126C321E3DB1A0058E737 /* SmartpushNotificationContent.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BA47060C21E534FE00529CBE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,8 +203,8 @@
 		BAE7D8CE21C0245200FB9930 = {
 			isa = PBXGroup;
 			children = (
+				FA497AA3244BC3520090AE71 /* SmartpushSDK.xcodeproj */,
 				BA4126D321E3E7320058E737 /* Bridging-Header.h */,
-				BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */,
 				BAE7D8D921C0245200FB9930 /* ios-smartpush-demo */,
 				BAE7D8EE21C0245500FB9930 /* ios-smartpush-demoTests */,
 				BAE7D8F921C0245500FB9930 /* ios-smartpush-demoUITests */,
@@ -325,6 +294,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA497AA4244BC3520090AE71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA497AAA244BC3520090AE71 /* SmartpushSDK.framework */,
+				FA497AAC244BC3520090AE71 /* SmartpushNotificationExtension.appex */,
+				FA497AAE244BC3520090AE71 /* SmartpushNotificationContent.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,9 +323,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				BA4126C721E3DECE0058E737 /* PBXTargetDependency */,
-				BA4126CA21E3DECE0058E737 /* PBXTargetDependency */,
-				BA4126CD21E3DECE0058E737 /* PBXTargetDependency */,
 			);
 			name = "ios-smartpush-demo";
 			productName = "ios-smartpush-demo";
@@ -435,8 +411,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BA4126B921E3DB190058E737 /* Products */;
-					ProjectRef = BA4126B821E3DB190058E737 /* SmartpushSDK.xcodeproj */;
+					ProductGroup = FA497AA4244BC3520090AE71 /* Products */;
+					ProjectRef = FA497AA3244BC3520090AE71 /* SmartpushSDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -449,25 +425,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BA4126BF21E3DB1A0058E737 /* SmartpushSDK.framework */ = {
+		FA497AAA244BC3520090AE71 /* SmartpushSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SmartpushSDK.framework;
-			remoteRef = BA4126BE21E3DB1A0058E737 /* PBXContainerItemProxy */;
+			remoteRef = FA497AA9244BC3520090AE71 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BA4126C121E3DB1A0058E737 /* SmartpushNotificationExtension.appex */ = {
+		FA497AAC244BC3520090AE71 /* SmartpushNotificationExtension.appex */ = {
 			isa = PBXReferenceProxy;
 			fileType = "wrapper.app-extension";
 			path = SmartpushNotificationExtension.appex;
-			remoteRef = BA4126C021E3DB1A0058E737 /* PBXContainerItemProxy */;
+			remoteRef = FA497AAB244BC3520090AE71 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BA4126C321E3DB1A0058E737 /* SmartpushNotificationContent.appex */ = {
+		FA497AAE244BC3520090AE71 /* SmartpushNotificationContent.appex */ = {
 			isa = PBXReferenceProxy;
 			fileType = "wrapper.app-extension";
 			path = SmartpushNotificationContent.appex;
-			remoteRef = BA4126C221E3DB1A0058E737 /* PBXContainerItemProxy */;
+			remoteRef = FA497AAD244BC3520090AE71 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -644,21 +620,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BA4126C721E3DECE0058E737 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SmartpushSDK;
-			targetProxy = BA4126C621E3DECE0058E737 /* PBXContainerItemProxy */;
-		};
-		BA4126CA21E3DECE0058E737 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SmartpushNotificationExtension;
-			targetProxy = BA4126C921E3DECE0058E737 /* PBXContainerItemProxy */;
-		};
-		BA4126CD21E3DECE0058E737 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SmartpushNotificationContent;
-			targetProxy = BA4126CC21E3DECE0058E737 /* PBXContainerItemProxy */;
-		};
 		BAE7D8ED21C0245500FB9930 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BAE7D8D621C0245200FB9930 /* ios-smartpush-demo */;
@@ -815,7 +776,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
@@ -842,7 +803,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";

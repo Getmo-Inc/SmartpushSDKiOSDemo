@@ -37,6 +37,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8CAA3AF224ECB22800DB1633 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA497AA3244BC3520090AE71 /* SmartpushSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA0F2691F45533A00473E93;
+			remoteInfo = SmartpushNotificationContent;
+		};
+		8CAA3AF424ECB22800DB1633 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA497AA3244BC3520090AE71 /* SmartpushSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC36C8F1F42784A00708DC1;
+			remoteInfo = SmartpushNotificationExtension;
+		};
+		8CAA3AF624ECB22800DB1633 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA497AA3244BC3520090AE71 /* SmartpushSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FAD96E2F1F3D550D004E828C;
+			remoteInfo = SmartpushSDK;
+		};
 		BAE7D8EC21C0245500FB9930 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BAE7D8CF21C0245200FB9930 /* Project object */;
@@ -323,6 +344,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				8CAA3AF324ECB22800DB1633 /* PBXTargetDependency */,
+				8CAA3AF524ECB22800DB1633 /* PBXTargetDependency */,
+				8CAA3AF724ECB22800DB1633 /* PBXTargetDependency */,
 			);
 			name = "ios-smartpush-demo";
 			productName = "ios-smartpush-demo";
@@ -620,6 +644,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8CAA3AF324ECB22800DB1633 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SmartpushNotificationContent;
+			targetProxy = 8CAA3AF224ECB22800DB1633 /* PBXContainerItemProxy */;
+		};
+		8CAA3AF524ECB22800DB1633 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SmartpushNotificationExtension;
+			targetProxy = 8CAA3AF424ECB22800DB1633 /* PBXContainerItemProxy */;
+		};
+		8CAA3AF724ECB22800DB1633 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SmartpushSDK;
+			targetProxy = 8CAA3AF624ECB22800DB1633 /* PBXContainerItemProxy */;
+		};
 		BAE7D8ED21C0245500FB9930 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BAE7D8D621C0245200FB9930 /* ios-smartpush-demo */;
@@ -776,7 +815,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
@@ -785,7 +824,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 13.0.0;
+				MARKETING_VERSION = 13.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -803,7 +842,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7GGYTT3FER;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
@@ -812,7 +851,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 13.0.0;
+				MARKETING_VERSION = 13.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

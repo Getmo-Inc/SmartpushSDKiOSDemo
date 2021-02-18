@@ -815,8 +815,8 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = B376N7ZWHA;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -824,8 +824,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 13.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample";
+				MARKETING_VERSION = 13.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.getmo.SmartpushDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
@@ -842,8 +842,8 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = B376N7ZWHA;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -851,8 +851,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 13.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample";
+				MARKETING_VERSION = 13.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.getmo.SmartpushDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
@@ -869,7 +869,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = B376N7ZWHA;
 				INFOPLIST_FILE = "ios-smartpush-demoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -892,7 +892,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = B376N7ZWHA;
 				INFOPLIST_FILE = "ios-smartpush-demoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -914,7 +914,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = B376N7ZWHA;
 				INFOPLIST_FILE = "ios-smartpush-demoUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -936,7 +936,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = B376N7ZWHA;
 				INFOPLIST_FILE = "ios-smartpush-demoUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

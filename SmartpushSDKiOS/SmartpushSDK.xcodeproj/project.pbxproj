@@ -294,7 +294,7 @@
 				TargetAttributes = {
 					FAA0F2691F45533A00473E93 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7GGYTT3FER;
+						DevelopmentTeam = B376N7ZWHA;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -304,7 +304,7 @@
 					};
 					FAC36C8F1F42784A00708DC1 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7GGYTT3FER;
+						DevelopmentTeam = B376N7ZWHA;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -412,9 +412,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				CURRENT_PROJECT_VERSION_STR = 2.3.0;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = B376N7ZWHA;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -422,9 +422,9 @@
 				);
 				INFOPLIST_FILE = SmartpushNotificationContent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 13.0.1;
+				MARKETING_VERSION = 1.0.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationContent";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.getmo.SmartpushDemoApp.SmartpushNotificationContent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -439,9 +439,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				CURRENT_PROJECT_VERSION_STR = 2.3.0;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = B376N7ZWHA;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,8 +449,8 @@
 				);
 				INFOPLIST_FILE = SmartpushNotificationContent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 13.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationContent";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.getmo.SmartpushDemoApp.SmartpushNotificationContent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -465,9 +465,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				CURRENT_PROJECT_VERSION_STR = 2.3.0;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = B376N7ZWHA;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,9 +475,9 @@
 				);
 				INFOPLIST_FILE = SmartpushNotificationExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 13.0.1;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.getmo.SmartpushDemoApp.SmartpushNotificationExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -493,9 +493,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				CURRENT_PROJECT_VERSION_STR = 2.3.0;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = B376N7ZWHA;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -503,9 +503,9 @@
 				);
 				INFOPLIST_FILE = SmartpushNotificationExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 13.0.1;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.getmo.SmartpushDemoApp.SmartpushNotificationExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -659,7 +659,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 13.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.smartpush;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.getmo.SmartpushSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -693,7 +693,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 13.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.smartpush;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.getmo.SmartpushSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

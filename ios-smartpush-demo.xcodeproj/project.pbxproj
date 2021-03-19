@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0113C82DD06D00F5F9570502 /* Pods_ios_smartpush_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E961BE1E269FA3741D0F7EDE /* Pods_ios_smartpush_demoTests.framework */; };
+		8CC408BE26055F9B00D72E2B /* SmartpushSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA497AAA244BC3520090AE71 /* SmartpushSDK.framework */; };
+		8CC408BF26055F9B00D72E2B /* SmartpushSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA497AAA244BC3520090AE71 /* SmartpushSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4456EE7174CF3534A7E3FE1 /* Pods_ios_smartpush_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE4639A842CCD447C02A510 /* Pods_ios_smartpush_demo.framework */; };
 		BA03F2EF21F23C3400D1FCD3 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA03F2EE21F23C3400D1FCD3 /* Tags.swift */; };
 		BA4126DB21E4233E0058E737 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4126DA21E4233E0058E737 /* TagsViewController.swift */; };
@@ -32,8 +34,6 @@
 		D4E7DBF924140AD800C1D425 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7DBF824140AD800C1D425 /* RootViewController.swift */; };
 		FA497AB3244BC3B00090AE71 /* SmartpushNotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA497AAE244BC3520090AE71 /* SmartpushNotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA497AB4244BC3B00090AE71 /* SmartpushNotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA497AAC244BC3520090AE71 /* SmartpushNotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FA497AB5244BC3B00090AE71 /* SmartpushSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA497AAA244BC3520090AE71 /* SmartpushSDK.framework */; };
-		FA497AB6244BC3B00090AE71 /* SmartpushSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA497AAA244BC3520090AE71 /* SmartpushSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,13 +50,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FAC36C8F1F42784A00708DC1;
 			remoteInfo = SmartpushNotificationExtension;
-		};
-		8CAA3AF624ECB22800DB1633 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA497AA3244BC3520090AE71 /* SmartpushSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FAD96E2F1F3D550D004E828C;
-			remoteInfo = SmartpushSDK;
 		};
 		BAE7D8EC21C0245500FB9930 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -96,13 +89,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BA4126CE21E3DECF0058E737 /* Embed Frameworks */ = {
+		8CC408C026055F9B00D72E2B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA497AB6244BC3B00090AE71 /* SmartpushSDK.framework in Embed Frameworks */,
+				8CC408BF26055F9B00D72E2B /* SmartpushSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4456EE7174CF3534A7E3FE1 /* Pods_ios_smartpush_demo.framework in Frameworks */,
-				FA497AB5244BC3B00090AE71 /* SmartpushSDK.framework in Frameworks */,
+				8CC408BE26055F9B00D72E2B /* SmartpushSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,16 +330,15 @@
 				BAE7D8D421C0245200FB9930 /* Frameworks */,
 				BAE7D8D521C0245200FB9930 /* Resources */,
 				98BFC066ABE39A379AAE4F1F /* [CP] Embed Pods Frameworks */,
-				BA4126CE21E3DECF0058E737 /* Embed Frameworks */,
 				BA4126CF21E3DECF0058E737 /* Embed App Extensions */,
 				C5A4A6D0929A7DEF2FA6CD47 /* [CP] Copy Pods Resources */,
+				8CC408C026055F9B00D72E2B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				8CAA3AF324ECB22800DB1633 /* PBXTargetDependency */,
 				8CAA3AF524ECB22800DB1633 /* PBXTargetDependency */,
-				8CAA3AF724ECB22800DB1633 /* PBXTargetDependency */,
 			);
 			name = "ios-smartpush-demo";
 			productName = "ios-smartpush-demo";
@@ -654,11 +646,6 @@
 			name = SmartpushNotificationExtension;
 			targetProxy = 8CAA3AF424ECB22800DB1633 /* PBXContainerItemProxy */;
 		};
-		8CAA3AF724ECB22800DB1633 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SmartpushSDK;
-			targetProxy = 8CAA3AF624ECB22800DB1633 /* PBXContainerItemProxy */;
-		};
 		BAE7D8ED21C0245500FB9930 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BAE7D8D621C0245200FB9930 /* ios-smartpush-demo */;
@@ -815,16 +802,17 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = B376N7ZWHA;
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 13.0.2;
+				MARKETING_VERSION = 13.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.getmo.SmartpushDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -842,16 +830,17 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-smartpush-demo/ios-smartpush-demo.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = B376N7ZWHA;
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "ios-smartpush-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 13.0.2;
+				MARKETING_VERSION = 13.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.getmo.SmartpushDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -870,6 +859,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B376N7ZWHA;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "ios-smartpush-demoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -893,6 +883,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B376N7ZWHA;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "ios-smartpush-demoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -915,6 +906,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B376N7ZWHA;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "ios-smartpush-demoUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -937,6 +929,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B376N7ZWHA;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "ios-smartpush-demoUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
